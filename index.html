@@ -1,35 +1,68 @@
 <!doctype html>
 <html lang="en" ng-app="myApp">
+
 <head>
-  <meta charset="utf-8">
-  <title>My AngularJS App</title>
-  <link rel="stylesheet" href="css/app.css"/>
-  <link rel="stylesheet" href="css/customstyles.css"/>
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <meta charset="utf-8">
+    <title>Woontevreden</title>
+    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <!-- <link rel="stylesheet" href="css/animate.css"/> -->
+    <link rel="stylesheet" href="css/ng-table.min.css" />    
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 </head>
+
 <body>
-  <ul class="menu">
-    <li><a href="#/info">Info</a></li>
-    <li><a href="#/stichting_ymere">Ymere</a></li>
-    <li><a href="#/woningstichting_rochdale">Rochdale</a></li>
-    <li><a href="#/woningstichting_eigen_haard">Eigen Haard</a></li>
-    <li><a href="#/stadgenoot">Stadgenoot</a></li>
-    <li><a href="#/woonstichting_de_key">de Key</a></li>
-    <!-- <li><a href="#/view3">view3</a></li> -->
-  </ul>
-  
-  <h1>Welkom bij Woontevreden</h1>
+    <div class="container-responsive">
+        <!-- TOP NAV -->
 
-  <!-- NG-VIEW -->
+        <nav class="collapse navbar-collapse bs-navbar-collapse col-xs-offset-3 topnav">
+            <ul class="nav navbar-nav">
+                <li><a href="#/Home">Corporaties in context</a>
+                </li>
+                <li><a href="#/OverOns">Over ons</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="spacer"></div>
 
-  <div ng-view></div>
+        <div class="row">
 
+            <div class="col-xs-3">
 
-  <!-- In production use:
+                <!-- CORPO SIDE NAV -->
+
+                <div class="bs-docs-sidebar hidden-print hidden-xs affix" role="complementary" ng-controller="RankingCtrl">
+                    <h6>PARTICIPERENDE CORPORATIES</h6>
+                    <ul class="nav bs-docs-sidenav">
+                        <li ng-repeat="data in gegevens"><a href="/#{{data.pad}}">{{data.naam}}</a>
+                        </li>
+                    </li>
+                </ul>
+                <!-- BRANDING HOMEPAGE -->
+
+                <div class="brandingHomepage">
+                    <div class="brandingHomepageAlias">
+                        <!-- <li>tel: 020 6249076</li>
+                        <li>adres: Tweede Kostverlorenkade 65</li>
+                        <li>1053SB Amsterdam</li> --><iframe src="https://www.google.com/maps/embed?pb=!1m23!1m8!1m3!1d2436.2056311014103!2d4.8622286!3d52.3666913!3m2!1i1024!2i768!4f13.1!4m12!1i0!3e6!4m3!3m2!1d52.3666511!2d4.8622032!4m5!1s0x47c5e20b666949fb%3A0x29978b0ea818788c!2sWerk!3m2!1d52.366688599999996!2d4.8622366999999995!5e0!3m2!1snl!2s!4v1394722106768" width="174" height="120    " frameborder="0" style="border:0"></iframe>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- NG-VIEW -->
+        <div class="col-xs-8" ng-view></div>
+    </div>
+
+</div>
+    <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
 -->
 
 <script src="lib/angular/angular.js"></script>
+<script src="lib/angular/angular-bootstrap.js"></script>
 <script src="lib/angular/angular-route.js"></script>
 <script src="js/app.js"></script>
 <script src="js/services.js"></script>
@@ -37,11 +70,7 @@
 <script src="js/filters.js"></script>
 <script src="js/directives.js"></script>
 <script src="js/underscore-min.js"></script>
-<script src="js/instantclick.min.js"></script>
-<script data-no-instant>InstantClick.init();</script>
-
-  <!-- woningcorporaties 
-  <script src="js/wocos/stichting_ymere.js"></script>  -->
+<script src="js/ng-table.min.js"></script>
 </body>
+
 </html>
-so

@@ -1,0 +1,190 @@
+/*TEXT STYLES*/
+p,body h1,body h2,body h3,body h4,body h5,body h6,a,table
+{
+	font-family:'Open Sans',sans-serif;
+	font-weight: 600;
+}
+
+p {
+	font-size: 1.2em;
+}
+
+body h1, body h2, body h3 {
+	font-weight: 300;
+	color: #665c5c
+}
+
+p a, ul a, table a, table a:hover, ul a:hover, p a:hover {
+	color: #665c5c
+}
+
+/*TOPNAV*/
+.topnav
+{
+	font-size:1.2em;
+	border-bottom:2px solid RGBA(249, 121, 40, 1)
+}
+
+/*SIDEBAR*/
+.bs-docs-sidebar
+{
+	font-size:1em
+}
+
+.bs-docs-sidebar h6{
+	margin-left: 9px;
+	letter-spacing: 0.1em;
+	padding: 5px;
+	color: #fff;
+	display: inline-block;
+	border-radius: 3px;
+	font-weight: 400;
+	background-color: RGBA(145, 132, 132, 1); 
+}
+
+/*INDEX PAGE STYLE*/
+.brandingHomepage
+{
+	margin-left:15px;
+	position: fixed;
+	bottom: 25px;
+	width: 174px;
+	height: 120px;
+	background: RGBA(249, 249, 249, 1);
+	border:1px solid RGBA(221, 221, 221, 1);
+	border-radius: 3px;
+	background-image:url(/img/indexPage/brandingHomepage.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	overflow: hidden;
+}
+
+.brandingHomepageAlias {
+	position: absolute;
+	bottom: 120px;	
+	width: 174px;
+	height: 120px;
+	background: RGBA(249, 249, 249, 1);
+	border:1px solid RGBA(221, 221, 221, 1);
+	border-radius: 3px;
+	-webkit-transition:bottom .3s;
+}
+
+.brandingHomepage:hover > .brandingHomepageAlias {
+	bottom:0px;
+}
+
+.brandingHomepageAlias li {
+	list-style: none;
+	font-size: 0.7em;
+	padding: 3px;
+}
+
+/*ABOUT PAGE STYLES*/
+.aboutPage p
+{
+	font-size:1em;
+	font-weight:300;
+}
+
+.aboutPage
+{
+	overflow:hidden;
+	position:relative;
+}
+
+.aboutText
+{	
+	max-width: 100%;
+	height:60px;
+	padding:5px;
+	color:#ededed;
+	border-radius:3px;
+	background:rgba(34,44,44,0.5);
+	position:absolute;
+	bottom:-100px;
+	-webkit-transition:bottom .5s
+}
+
+.aboutPage:hover > .aboutText
+{
+	bottom:0
+}
+
+.aboutPage img
+{
+	opacity:1;
+	width: 100%;
+	border-radius:3px;
+	border:2px solid #ededed;
+	-webkit-transition:opacity 1.5s
+}
+
+.aboutPage:hover > img
+{
+	opacity:.5
+}
+
+/*HACKS*/
+.spacer
+{
+	height:40px
+}
+
+.row
+{
+	margin-right:0!important;
+	margin-left:0!important
+}
+
+/*RESPONSIVE TABLE HACK*/
+
+@media only screen and (max-width: 760px),(min-device-width: 768px) and (max-device-width: 1024px) {
+	/* Force table to not be like tables anymore */
+	table,thead,tbody,th,td,tr
+	{
+		display:block
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr
+	{
+		position:absolute;
+		top:-9999px;
+		left:-9999px
+	}
+	
+	tr
+	{
+		border:1px solid #ccc;
+	}
+	
+	td
+	{
+		/* Behave  like a "row" */
+		border:none;
+		border-bottom:1px solid #eee;
+		position:relative;
+		padding-left:50%
+	}
+	
+	td:before
+	{
+		/* Now like a table header */
+		position:absolute;
+		/* Top/left values mimic padding */
+		top:8px;
+		left:20px;
+		width:45%;
+		padding-right:10px;
+		white-space:nowrap;
+		font-weight:700;
+	}
+	/*
+	Label the data
+	*/
+/*	td:nth-of-type(1):before { content: ""; }
+	td:nth-of-type(2):before { content: "woning"; }
+	td:nth-of-type(3):before { content: "omgeving"; }
+	td:nth-of-type(4):before { content: "woonsituatie"; }
+*/}

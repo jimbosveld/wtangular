@@ -1,15 +1,19 @@
-
-<div ng-controller="WocoCtrlRochdale">
-  <table class="table table-striped">
-    <tbody ng-repeat="gegevens in gegevens"> 
-      <tr>
-        <th>{{gegevens.cijfer_woningcorporatie}}</th>
-        <th>{{gegevens.cijfer_woning}}</th>
-        <th>{{gegevens.cijfer_woonomgeving}}</th>
-        <th>{{gegevens.cijfer_woonsituatie}}</th>
-        <th>{{gegevens.review}}</th>
+<div ng-controller="WocoCtrlRochdale" >
+  <h1 ng-bind="gegevens[0].naam"></h1>
+  <div ng-controller="RankingCtrl">
+    <p>
+      <span ng-bind="gegevens[0].naam"></span> scoort een <span ng-bind="gegevens[0].corporatie  | number:1"></span> als woningcorporatie (met in totaal <span ng-bind="gegevens[0].n  | number:0"></span> ingevulde vragenlijsten). Woningen van <span ng-bind="gegevens[0].naam"></span> scoren een gemiddelde <span ng-bind="gegevens[0].woning  | number:1"></span> en omgeving en woonsituatie halen respectievelijk een <span ng-bind="gegevens[0].omgeving | number:1"></span> en <span ng-bind="gegevens[0].woonsituatie | number:1"></span>. Om <span ng-bind="gegevens[0].naam"></span> in context te zien kun je op de <a href="/#home">rankingpagina</a> kijken.
+    </p>
+  </div>
+  <p class="hidden-sm hidden-xs"><button ng-click="tableParams.sorting({})" class="btn btn-default pull-right">Verwijder sortering</button></p><br><br>
+  <table ng-table ="tableParams" show-filter="true" class="table table-striped">
+    <tbody> 
+      <tr ng-repeat="data in $data">
+        <td data-title="'review'" sortable="'review'" filter="{'review':'text'}">{{data.review}}</td>
+        <td data-title="'woning'" sortable="'woning'">{{data.woning}}</td>
+        <td data-title="'omgeving'" sortable="'omgeving'">{{data.omgeving}}</td>
+        <td data-title="'woonsituatie'" sortable="'woonsituatie'">{{data.woonsituatie}}</td>
       </tr>
     </tbody>
   </table>
 </div>
-

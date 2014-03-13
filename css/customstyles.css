@@ -5,7 +5,7 @@
 body {
   position: absolute;
   overflow-x: hidden;
-  background: url(/assets/img/ticks1.png);
+  /*background: url(/assets/img/ticks1.png);*/
 }
 .row {
   margin-right: 0;
