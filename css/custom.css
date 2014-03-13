@@ -68,6 +68,7 @@ p a, ul a, table a, table a:hover, ul a:hover, p a:hover {
 	border:1px solid RGBA(221, 221, 221, 1);
 	border-radius: 3px;
 	-webkit-transition:bottom .3s;
+	transition:bottom .3s;
 }
 
 .brandingHomepage:hover > .brandingHomepageAlias {
@@ -103,7 +104,8 @@ p a, ul a, table a, table a:hover, ul a:hover, p a:hover {
 	background:rgba(34,44,44,0.5);
 	position:absolute;
 	bottom:-100px;
-	-webkit-transition:bottom .5s
+	-webkit-transition:bottom .5s;
+	transition:bottom .5s;
 }
 
 .aboutPage:hover > .aboutText
@@ -117,7 +119,8 @@ p a, ul a, table a, table a:hover, ul a:hover, p a:hover {
 	width: 100%;
 	border-radius:3px;
 	border:2px solid #ededed;
-	-webkit-transition:opacity 1.5s
+	-webkit-transition:opacity 1.5s;
+	transition:opacity 1.5s;
 }
 
 .aboutPage:hover > img
