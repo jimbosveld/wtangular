@@ -142,11 +142,11 @@ p a, ul a, table a, table a:hover, ul a:hover, p a:hover {
 
 /*RESPONSIVE TABLE HACK*/
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+@media only screen and (min-device-width: 120px) and (max-device-width: 568px) {
 	/* Force table to not be like tables anymore */
 	table,thead,tbody,th,td,tr
 	{
-		display:block
+		display:block;
 	}
 	
 	/* Hide table headers (but not display: none;, for accessibility) */
