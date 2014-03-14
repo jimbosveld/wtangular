@@ -18,11 +18,17 @@ p a, ul a, table a, table a:hover, ul a:hover, p a:hover {
 	color: #665c5c
 }
 
+
 /*TOPNAV*/
 .topnav
 {
 	font-size:1.2em;
 	border-bottom:2px solid RGBA(249, 121, 40, 1)
+}
+
+a.navbar-brand {
+	color: RGBA(249, 121, 40, 1);
+	font-size: 1em;
 }
 
 /*SIDEBAR*/

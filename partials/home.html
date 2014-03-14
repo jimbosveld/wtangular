@@ -1,7 +1,7 @@
 <div ng-controller="RankingCtrl">
   <h1>Corporaties in context</h1>
   <p>Hieronder een overzicht van de prestaties van de participerende woningcorporaties. De prestaties worden gemeten in de vorm van rapportcijfers.</p>
-  <p><button ng-click="tableParams.sorting({})" class="btn btn-default pull-right">Verwijder sortering</button></p><br><br>
+  <p><button ng-click="tableParams.sorting({})" class="hidden-xs btn btn-default pull-right">Verwijder sortering</button></p><br><br>
   <div class="table-responsive"><table ng-table ="tableParams" show-filter="true" class="table table-striped" template-pagination="custom/pager">
     <tbody> 
       <tr ng-repeat="data in $data"> 
