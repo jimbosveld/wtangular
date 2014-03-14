@@ -16,7 +16,7 @@
     <div class="container-responsive">
         <!-- TOP NAV -->
 
-        <nav class="collapse navbar-collapse bs-navbar-collapse col-xs-offset-3 topnav">
+        <nav class="collapse navbar-collapse bs-navbar-collapse col-md-offset-3 topnav">
             <ul class="nav navbar-nav">
                 <li><a href="#/Home">Corporaties in context</a>
                 </li>
@@ -32,7 +32,7 @@
 
                 <!-- CORPO SIDE NAV -->
 
-                <div class="bs-docs-sidebar hidden-print hidden-xs affix" role="complementary" ng-controller="RankingCtrl">
+                <div class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" role="complementary" ng-controller="RankingCtrl">
                     <h6>PARTICIPERENDE CORPORATIES</h6>
                     <ul class="nav bs-docs-sidenav">
                         <li ng-repeat="data in gegevens"><a href="/#{{data.pad}}">{{data.naam}}</a>
@@ -53,7 +53,7 @@
         </div>
 
         <!-- NG-VIEW -->
-        <div class="col-xs-8" ng-view></div>
+        <div class="col-md-8" ng-view></div>
     </div>
 
 </div>
