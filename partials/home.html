@@ -2,7 +2,7 @@
   <h1>Corporaties in context</h1>
   <p>Hieronder een overzicht van de prestaties van de participerende woningcorporaties. De prestaties worden gemeten in de vorm van rapportcijfers.</p>
   <p><button ng-click="tableParams.sorting({})" class="hidden-xs btn btn-default pull-right">Verwijder sortering</button></p><br><br>
-  <div class="table-responsive"><table ng-table ="tableParams" show-filter="true" class="table table-striped" template-pagination="custom/pager">
+  <div class="table-responsive"><table ng-table ="tableParams" show-filter="true" class="table table-striped">
     <tbody> 
       <tr ng-repeat="data in $data"> 
         <td data-title="'Naam corporatie'"><a href="/#{{data.pad}}">{{data.naam}}</a></td>
@@ -14,7 +14,14 @@
       </tr>
     </tbody>
   </table>
-  </div>
+</div>
+<div class="spacer"></div>
+<!-- <div ng-controller="ChartRankingCtrl">
+  <svg class="chart"></svg>
+</div> -->
+<div>
+  <canvas id="rankingCtrlChart" width="900" height="400"></canvas>
+</div>
 </div>
 
 

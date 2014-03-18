@@ -197,3 +197,7 @@ a.navbar-brand {
 	td:nth-of-type(3):before { content: "omgeving"; }
 	td:nth-of-type(4):before { content: "woonsituatie"; }
 */}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
