@@ -1,3 +1,9 @@
+/*BASIC STYLES*/
+
+body {
+	background: #f6f6f6 !important;
+}
+
 /*TEXT STYLES*/
 p,body h1,body h2,body h3,body h4,body h5,body h6,a,table
 {
@@ -6,7 +12,8 @@ p,body h1,body h2,body h3,body h4,body h5,body h6,a,table
 }
 
 p {
-	font-size: 1.2em;
+	font-size: 1.4em;
+	font-weight: 300;
 }
 
 body h1, body h2, body h3 {
@@ -45,8 +52,49 @@ a.navbar-brand {
 	display: inline-block;
 	border-radius: 3px;
 	font-weight: 400;
-	background-color: RGBA(145, 132, 132, 1); 
+	background-color: RGBA(145, 132, 132, 1);
 }
+
+/*HOME & POSTS*/
+
+.intro iframe {
+}
+
+.intro p {
+	font-size: 2em;
+}
+
+.intro span {
+	color: #ff6b00
+}
+
+.homePost {
+	padding:20px;
+	margin:35px 0px 0px 0px;
+	background: #ededed;
+	position:relative;
+	opacity: 0.7;
+}
+
+.homePost:first-of-type {
+	background: #e0e0e0;
+	opacity: 1;
+}
+
+.postTime{
+	position:absolute;
+	font-family:'Open Sans';
+	font-size: 0.8em;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: #fff;
+	top:-15px;
+	background: #ff6b00;
+	padding: 10px 10px 10px 10px;
+	border-radius:999px;
+}
+
+
 
 /*INDEX PAGE STYLE*/
 .brandingHomepage
@@ -67,7 +115,7 @@ a.navbar-brand {
 
 .brandingHomepageAlias {
 	position: absolute;
-	bottom: 120px;	
+	bottom: 120px;
 	width: 174px;
 	height: 120px;
 	background: RGBA(249, 249, 249, 1);
@@ -87,7 +135,7 @@ a.navbar-brand {
 	padding: 3px;
 }
 
-/*ABOUT PAGE STYLES*/
+/*OVER ONS*/
 .aboutPage p
 {
 	font-size:1em;
@@ -101,7 +149,7 @@ a.navbar-brand {
 }
 
 .aboutText
-{	
+{
 	max-width: 100%;
 	height:60px;
 	padding:5px;
@@ -124,7 +172,6 @@ a.navbar-brand {
 	opacity:1;
 	width: 100%;
 	border-radius:3px;
-	border:2px solid #ededed;
 	-webkit-transition:opacity 1.5s;
 	transition:opacity 1.5s;
 }
@@ -154,7 +201,7 @@ a.navbar-brand {
 	{
 		display:block;
 	}
-	
+
 	/* Hide table headers (but not display: none;, for accessibility) */
 	thead tr
 	{
@@ -162,12 +209,12 @@ a.navbar-brand {
 		top:-9999px;
 		left:-9999px
 	}
-	
+
 	tr
 	{
 		border:1px solid #ccc;
 	}
-	
+
 	td
 	{
 		/* Behave  like a "row" */
@@ -176,7 +223,7 @@ a.navbar-brand {
 		position:relative;
 		padding-left:50%
 	}
-	
+
 	td:before
 	{
 		/* Now like a table header */
@@ -198,6 +245,28 @@ a.navbar-brand {
 	td:nth-of-type(4):before { content: "woonsituatie"; }
 */}
 
+/*/*NGCLOAK*/
+
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-  display: none !important;
+	display: none !important;
+}
+
+/*VOORWIE*/
+
+.myAccordion .panel-title{
+	font-size: 1.6em;
+}
+
+.myAccordion .panel-title a {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.myAccordion {
+	border-radius: 0px !important;
+	box-shadow: none !important;
+}
+
+.myAccordion p {
+	font-weight: 300;
 }

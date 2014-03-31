@@ -1,6 +1,5 @@
 'use strict';
 
-
 // Declare app level module which depends on filters, and services
 angular.module('myApp', [
   'ngRoute',
@@ -8,10 +7,14 @@ angular.module('myApp', [
   'myApp.services',
   'myApp.directives',
   'myApp.controllers',
-  'ngTable'
+  'ngTable',
+  'ngAnimate',
+  'ui.bootstrap'
   ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/Home', {templateUrl: 'partials/home.html', controller: 'HomeCtrl'});
+  $routeProvider.when('/Context', {templateUrl: 'partials/context.html', controller: 'RankingCtrl'});
+  $routeProvider.when('/Voorwie', {templateUrl: 'partials/voorwie.html', controller: 'RankingCtrl'});
   $routeProvider.when('/OverOns', {templateUrl: 'partials/overons.html', controller: 'OverOnsCtrl'});
   $routeProvider.when('/Dashboard', {templateUrl: 'partials/dashboard.html', controller: 'DashboardCtrl'});
   $routeProvider.when('/stichting_ymere', {templateUrl: 'partials/stichting_ymere.html', controller: 'stichting_ymereCtrl'});
@@ -20,5 +23,6 @@ config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/stadgenoot', {templateUrl: 'partials/stadgenoot.html', controller: 'stadgenootCtrl'});
   $routeProvider.when('/woonstichting_de_key', {templateUrl: 'partials/woonstichting_de_key.html', controller: 'woonstichting_de_keyCtrl'});
   $routeProvider.otherwise({redirectTo: '/Home'});
+  // $routeProvider.when('/:wocoPath', {templateUrl: 'partials/woco.html', controller: 'WocoCtrl'});
 }]);
 

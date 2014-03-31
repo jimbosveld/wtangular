@@ -2,7 +2,12 @@
 
 /* Services */
 
-// Demonstrate how to register services
-// In this case it is a simple value service.
 angular.module('myApp.services', []).
-value('version', '0.1');
+factory('wocoRepository', function($http,$routeParams) {
+    return {
+        getAverages: function() {
+            var url = "http://api.woontevreden.nl/data/corporatiecijfers/";
+            return $http.get(url);
+        }
+    }
+})
