@@ -12,62 +12,64 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.css">
 </head>
+
 <body>
     <div class="container-responsive">
         <!-- TOP NAV -->
         <nav class="navbar-collapse bs-navbar-collapse col-md-offset-3 topnav">
             <ul class="nav navbar-nav">
-            	<li><a class="navbar-brand hidden-xs" href="#">Woontevreden</a>
+                <li><a class="brand" href="#">Woontevreden</a>
                 </li>
-                <li><a href="#/Context">Corporaties in context</a>
-                </li>
+                <!-- <li><a href="#/Context">Corporaties in context</a>
+                </li> -->
                 <li><a href="#/Voorwie">Voor wie is Woontevreden?</a>
                 </li>
                 <!-- <li><a href="#/Dashboard">Dashboard</a>
-            </li> -->
-            <li><a href="#/OverOns">Over ons</a>
-            </li>
-        </ul>
-    </nav>
-    <div class="spacer"></div>
-    <div class="row">
-        <div class="col-xs-3">
-            <!-- CORPO SIDE NAV -->
-            <div class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" role="complementary" ng-controller="RankingCtrl">
-                <h6>PARTICIPERENDE CORPORATIES</h6>
-                <ul ng-cloak class="nav bs-docs-sidenav">
-                    <li>
-                        <input ng-model="query" type="text" class="form-control" placeholder="zoek uw corporatie in de lijst" style="margin-top:8px;margin-left:8px;margin-bottom:8px;">
-                    </li>
-                    <li class="animate" ng-repeat="data in gegevens | filter:query "><a href="/#{{data.pad}}">{{data.naam}}</a>
-                    </li>
-                </ul>
-                <!-- BRANDING HOMEPAGE -->
-                <div class="brandingHomepage">
-                    <div class="brandingHomepageAlias">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m8!1m3!1d2436.2056311014103!2d4.8622286!3d52.3666913!3m2!1i1024!2i768!4f13.1!4m12!1i0!3e6!4m3!3m2!1d52.3666511!2d4.8622032!4m5!1s0x47c5e20b666949fb%3A0x29978b0ea818788c!2sWerk!3m2!1d52.366688599999996!2d4.8622366999999995!5e0!3m2!1snl!2s!4v1394722106768" width="174" height="120" frameborder="0" style="border:0"></iframe>
+                </li> -->
+                <li><a href="#/OverOns">Over ons</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="spacer"></div>
+        <div class="row">
+            <div class="col-xs-3 hidden-xs">
+                <!-- CORPO SIDE NAV -->
+                <div class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" role="complementary" ng-controller="RankingCtrl">
+                    <h6>PARTICIPERENDE CORPORATIES</h6>
+                    <ul ng-cloak class="nav bs-docs-sidenav">
+                        <li>
+                            <input ng-model="query" type="text" class="form-control" placeholder="zoek uw corporatie in de lijst" style="margin-top:8px;margin-left:8px;margin-bottom:8px;">
+                        </li>
+                        <li class="animate" ng-repeat="data in gegevens | filter:query "><a href="/#{{data.pad}}">{{data.naam}}</a>
+                        </li>
+                    </ul>
+                    <!-- BRANDING HOMEPAGE -->
+                    <div class="brandingHomepage">
+                        <div class="brandingHomepageAlias">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m8!1m3!1d2436.2056311014103!2d4.8622286!3d52.3666913!3m2!1i1024!2i768!4f13.1!4m12!1i0!3e6!4m3!3m2!1d52.3666511!2d4.8622032!4m5!1s0x47c5e20b666949fb%3A0x29978b0ea818788c!2sWerk!3m2!1d52.366688599999996!2d4.8622366999999995!5e0!3m2!1snl!2s!4v1394722106768" width="174" height="120" frameborder="0" style="border:0"></iframe>
+                        </div>
                     </div>
                 </div>
             </div>
+            <!-- NG-VIEW -->
+            <div ng-view class="col-md-8"></div>
         </div>
-        <!-- NG-VIEW -->
-        <div ng-view class="col-md-8"></div>
     </div>
     </div>
-</div>
-<script src="lib/angular/angular.js"></script>
-<script src="lib/angular/angular-bootstrap.js"></script>
-<script src="lib/angular/angular-route.js"></script>
-<script src="lib/angular/angular-animate.js"></script>
-<script src="js/app.js"></script>
-<script src="js/services.js"></script>
-<script src="js/controllers.js"></script>
-<script src="js/filters.js"></script>
-<script src="js/directives.js"></script>
-<script src="js/underscore-min.js"></script>
-<script src="js/ng-table.min.js"></script>
-<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-<script src="js/charts.js"></script>
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular/angular-bootstrap.js"></script>
+    <script src="lib/angular/angular-route.js"></script>
+    <script src="lib/angular/angular-animate.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/directives.js"></script>
+    <script src="js/ng-table.min.js"></script>
+    <script src="js/other.js"></script>
+    <script src="js/angular-fitvids.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="js/charts.js"></script>
 </body>
 
 </html>

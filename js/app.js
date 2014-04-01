@@ -9,7 +9,8 @@ angular.module('myApp', [
   'myApp.controllers',
   'ngTable',
   'ngAnimate',
-  'ui.bootstrap'
+  'ui.bootstrap',
+  'fitVids'
   ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/Home', {templateUrl: 'partials/home.html', controller: 'HomeCtrl'});
