@@ -194,9 +194,12 @@ a.brand, brand {
 	margin-left:0!important
 }
 
-/*RESPONSIVE TABLE HACK*/
+/*RESPONSIVE TABLE HACK & SOME RESPONSIVE STYLES*/
 
 @media only screen and (min-device-width: 120px) and (max-device-width: 568px) {
+	.intro p {
+		font-size: 1.4em;
+	}
 	/* Force table to not be like tables anymore */
 	table,thead,tbody,th,td,tr
 	{
