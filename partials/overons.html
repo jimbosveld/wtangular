@@ -1,9 +1,23 @@
-<div class="row" ng-controller="OverOnsCtrl">
-    <div class="col-sm-3"ng-repeat="image in images">
-        <div class="aboutPage">
-            <img ng-src="{{image.thumbnail}}"></img>
-            <div class="aboutText">
-                <p>{{image.description}}</p>
+<div ng-controller="OverOnsCtrl">
+    <div class="row">
+        <div class="col-sm-10">
+            <div class="intro">
+                <p>Wij zijn Woontevreden. Jorma, Onno, Sarah en Jim. We werken aan Woontevreden vanuit De Buurtfabriek, een gezellige verzameling flexwerkers en bedrijfjes in hartje Amsterdam.</p>
+            </div>
+            <div class="spacer"></div>
+            <p>
+                Je kunt ons altijd bellen op 020 624 90 76. Mailen kan naar <a href="mailto:info@woontevreden.nl">info@woontevreden.nl</a>
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="spacer"></div>
+        <div class="col-sm-3" ng-repeat="image in images">
+            <div class="aboutPage">
+                <img ng-src="{{image.thumbnail}}"></img>
+                <div class="aboutText">
+                    <p>{{image.description}}</p>
+                </div>
             </div>
         </div>
     </div>

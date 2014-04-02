@@ -8,6 +8,7 @@ angular.module('myApp', [
   'myApp.directives',
   'myApp.controllers',
   'ngTable',
+  'ngSanitize',
   'ngAnimate',
   'ui.bootstrap',
   'fitVids'
