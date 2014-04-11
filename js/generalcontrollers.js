@@ -35,11 +35,66 @@ angular.module('myApp.controllers', ['ngTable'])
         }
 
     ])
-    .controller('timeLineCtrl', ['$scope', '$http',
-        function($scope, $http) {
-            $http.get('/json/posts.json').success(function(data) {
-                $scope.posts = data;
-            })
+    .controller('timeLineCtrl', ['$scope', '$firebase',
+        function($scope, $firebase) {
+            var ref = new Firebase("https://glaring-fire-5859.firebaseio.com/");
+            $scope.posts = $firebase(ref);
+            $scope.addPost = function() {
+                $scope.posts.$add({
+                    title: $scope.newTitle,
+                    text: $scope.newPost,
+                    time: $scope.newTime
+                })
+                $scope.newTitle = "";
+                $scope.newPost = "";
+                $scope.newTime = "";
+            }
+            $scope.postRemove = function(key) {
+                $scope.posts.$remove(key);
+            }
+        }
+    ])
+    .controller('AuthCtrl', [
+        '$scope', '$rootScope', '$firebaseAuth',
+        function($scope, $rootScope, $firebaseAuth) {
+            var ref = new Firebase('https://glaring-fire-5859.firebaseio.com/');
+            $rootScope.auth = $firebaseAuth(ref);
+            $scope.signIn = function() {
+                $rootScope.auth.$login('password', {
+                    email: $scope.email,
+                    password: $scope.password
+                }).then(function(user) {
+                    $rootScope.alert.message = '';
+                }, function(error) {
+                    if (error = 'INVALID_EMAIL') {
+                        console.log('email invalid or not signed up');
+                        $rootScope.alert.message = 'deze gegevens zijn niet bekend';
+                    } else if (error = 'INVALID_PASSWORD') {
+                        console.log('wrong password!');
+                    } else {
+                        console.log(error);
+                    }
+                });
+            }
+
+            // GEBRUIK $scope.signUp() VOOR HET AANMAKEN VAN NIEUWE ACCOUNTS
+
+            $scope.signUp = function() {
+                $rootScope.auth.$createUser($scope.email, $scope.password, function(error, user) {
+                    if (!error) {
+                        $rootScope.alert.message = '';
+                    } else {
+                        $rootScope.alert.class = 'danger';
+                        $rootScope.alert.message = 'The username and password combination you entered is invalid.';
+                    }
+                });
+            }
+        }
+    ])
+    .controller('AlertCtrl', [
+        '$scope', '$rootScope',
+        function($scope, $rootScope) {
+            $rootScope.alert = {};
         }
     ])
     .controller('OverOnsCtrl', ['$scope', '$http',

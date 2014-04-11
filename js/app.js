@@ -7,11 +7,12 @@ angular.module('myApp', [
   'myApp.services',
   'myApp.directives',
   'myApp.controllers',
+  'firebase',
   'ngTable',
   'ngSanitize',
   'ngAnimate',
   'ui.bootstrap',
-  'fitVids'
+  'fitVids', 
   ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/Home', {templateUrl: 'partials/home.html', controller: 'HomeCtrl'});
@@ -25,6 +26,6 @@ config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/stadgenoot', {templateUrl: 'partials/stadgenoot.html', controller: 'stadgenootCtrl'});
   $routeProvider.when('/woonstichting_de_key', {templateUrl: 'partials/woonstichting_de_key.html', controller: 'woonstichting_de_keyCtrl'});
   $routeProvider.otherwise({redirectTo: '/Home'});
-  // $routeProvider.when('/:wocoPath', {templateUrl: 'partials/woco.html', controller: 'WocoCtrl'});
+  $routeProvider.when('/admin', {templateUrl: 'partials/admin.html', controller: 'AuthCtrl'});
 }]);
 

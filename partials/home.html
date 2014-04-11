@@ -3,17 +3,16 @@
         <brand>beter wonen</brand>. Dit doen we door het gesprek tussen bewoners en hun corporaties te ondersteunen. Wij verzamelen meningen en feiten en maken ze inzichtelijk. Hierdoor worden prestaties vergelijkbaar en kunnen corporaties gericht verbeteren.
     </p>
     <div class="spacer"></div>
-    <p>
+    <!-- <p>
         <div fit-vids>
             <iframe src="//player.vimeo.com/video/79342978?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" width="699" height="394" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
-    </p>
+    </p> -->
 </div>
 
 <div ng-controller="timeLineCtrl" class="col-sm-8">
     <h2>Het laatste nieuws</h2>
-
-    <div ng-repeat="post in posts | limitTo:5 " class="homePost">
+    <div ng-repeat="(key, post) in posts" class="homePost">
         <h3>
             {{post.title}}
         </h3>
@@ -23,5 +22,6 @@
         <p class="postTime">
             {{post.time}}
         </p>
+        <a ng-show="auth.user" ng-click="postRemove(key)" class="btn btn-danger">verwijder post</a>
     </div>
 </div>

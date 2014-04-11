@@ -1,0 +1,73 @@
+<div class="row">
+    <div class="col-md-4">
+        <form id="auth">
+            <fieldset ng-hide="auth.user">
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="email" ng-model="email" />
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="password" ng-model="password" />
+                </div>
+                <button type="submit" class="btn btn-default" ng-click="signIn()">inloggen</button>
+            </fieldset>
+        </form>
+        <div ng-controller="AlertCtrl">
+            <p>
+                <div class="alert alert-danger" ng-model="alert.message" ng-show="alert.message">
+                    {{alert.message}}
+                </div>
+            </p>
+        </div>
+        <div ng-show="auth.user">
+            <h4>Admin menu</h4>
+            <div>
+                <p>
+                    <a ng-click="newpost = !newpost" class="btn btn-success">
+                        Post management
+                    </a>
+                </p>
+                <p>
+                    <a target="_blank" href="https://glaring-fire-5859.firebaseio.com" class="btn btn-success">
+                        Firebase admin
+                    </a>
+                </p>
+                <p>
+                    <button type="submit" class="btn btn-danger" ng-click="auth.$logout()">
+                        uitloggen
+                    </button>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row" ng-show="newpost" ng-controller="timeLineCtrl">
+    <div class="col-sm-8">
+        <div ng-show="auth.user">
+            <form role="form">
+                <div class="row">
+                    <div class="form-group col-xs-4">
+                        <input type="text" class="form-control" placeholder="Titel" ng-model="newTitle">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-xs-4">
+                        <input type="date" class="form-control" ng-model="newTime">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-xs-8">
+                        <textarea type="text" class="form-control" placeholder="Tekst" ng-model="newPost" rows="10">
+                        </textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <button ng-click="addPost()" type="submit" class="btn btn-success">
+                            add post
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

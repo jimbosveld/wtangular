@@ -44,6 +44,10 @@ a.brand, brand {
 	color: RGBA(249, 121, 40, 1);
 }
 
+a.auth {
+	color: #29dd22;
+}
+
 /*SIDEBAR*/
 .bs-docs-sidebar
 {

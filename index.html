@@ -6,13 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Woontevreden</title>
     <script src='https://cdn.firebase.com/v0/firebase.js'></script>
-    <script>
-        var myDataRef = new Firebase('https://hx9waaqazd1.firebaseio-demo.com/');
-    </script>
     <link rel="stylesheet" href="css/custom.css" />
     <link rel="stylesheet" href="css/app.css" />
     <link rel="stylesheet" href="css/ng-table.min.css" />
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600' rel='stylesheet' type='text/css'>    
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.css">
 </head>
 
@@ -23,13 +20,12 @@
             <ul class="nav navbar-nav">
                 <li><a class="brand" href="#">Woontevreden</a>
                 </li>
-                <!-- <li><a href="#/Context">Corporaties in context</a>
-                </li> -->
                 <li><a href="#/Voorwie">Voor wie is Woontevreden?</a>
                 </li>
-                <!-- <li><a href="#/Dashboard">Dashboard</a>
-                </li> -->
                 <li><a href="#/OverOns">Over ons</a>
+                </li>
+                <li ng-controller="AuthCtrl">
+                    <a ng-show="auth.user" class="auth" href="#/admin">ingelogd als {{auth.user.email}}</a>
                 </li>
                 <li class="dropdown visible-xs" ng-controller="RankingCtrl">
                     <a href="" class="dropdown-toggle" data-toggle="dropdown">
@@ -67,21 +63,23 @@
             <div ng-view class="col-md-8"></div>
         </div>
     </div>
-    </div>
-    <script src="lib/angular/angular.js"></script>
-    <script src="lib/angular/angular-bootstrap.js"></script>
-    <script src="lib/angular/angular-route.js"></script>
-    <script src="lib/angular/angular-animate.js"></script>
-    <script src="lib/angular/angular-sanitize.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/services.js"></script>
-    <script src="js/controllers.js"></script>
-    <script src="js/filters.js"></script>
-    <script src="js/directives.js"></script>
-    <script src="js/ng-table.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="js/angular-fitvids.js"></script>   
-    <script src="js/other.js"></script>
+</div>
+<script src="lib/angular/angular.js"></script>
+<script src="lib/angular/angular-bootstrap.js"></script>
+<script src="lib/angular/angular-route.js"></script>
+<script src="lib/angular/angular-animate.js"></script>
+<script src="lib/angular/angular-sanitize.js"></script>
+<script src="js/app.js"></script>
+<script src="js/services.js"></script>
+<script src="js/generalcontrollers.js"></script>
+<script src="js/filters.js"></script>
+<script src="js/directives.js"></script>
+<script src="js/ng-table.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/angular-fitvids.js"></script>
+<script src="https://cdn.firebase.com/libs/angularfire/0.5.0/angularfire.min.js"></script>
+<script src='https://cdn.firebase.com/js/simple-login/1.3.2/firebase-simple-login.js'></script>
+<script src="js/other.js"></script>
 </body>
 
 </html>
