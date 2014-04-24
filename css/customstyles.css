@@ -347,43 +347,43 @@ li.corpos a {
   padding-bottom: 3em;
   background: url(/assets/img/ticks.png);
 }
-.subHead th {
-  background-color: #F5A772;
-}
-thead {
-  width: 100%;
-}
-.table {
-  color: #727272;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
-  color: #444444;
-}
-th {
-  background-color: #F57B28;
-  color: #fff;
-  font-size: 0.8em;
-  text-transform: uppercase;
-  vertical-align: middle;
-}
-.woonSituatie {
-  font-size: 4em;
-}
-th.review {
-  width: 55%;
-}
-th.woonsituatie {
-  width: 15%;
-}
-th.overig {
-  width: 15%;
-}
-th.onderwerp {
-  width: 15%;
-}
-th {
-  background-color: #F57B28;
-  color: black;
-  text-transform: uppercase;
-  
-}
+/*.subHead th {*/
+  /*background-color: #F5A772;*/
+/*}*/
+/*thead {*/
+  /*width: 100%;*/
+/*}*/
+/*.table {*/
+  /*color: #727272;*/
+  /*font-family: 'Open Sans', sans-serif;*/
+  /*font-weight: 300;*/
+  /*color: #444444;*/
+/*}*/
+/*th {*/
+  /*background-color: #F57B28;*/
+  /*color: #fff;*/
+  /*font-size: 0.8em;*/
+  /*text-transform: uppercase;*/
+  /*vertical-align: middle;*/
+/*}*/
+/*.woonSituatie {*/
+  /*font-size: 4em;*/
+/*}*/
+/*th.review {*/
+  /*width: 55%;*/
+/*}*/
+/*th.woonsituatie {*/
+  /*width: 15%;*/
+/*}*/
+/*th.overig {*/
+  /*width: 15%;*/
+/*}*/
+/*th.onderwerp {*/
+  /*width: 15%;*/
+/*}*/
+/*th {*/
+  /*background-color: #F57B28;*/
+  /*color: black;*/
+  /*text-transform: uppercase;*/
+
+/*}*/

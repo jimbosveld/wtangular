@@ -5,7 +5,7 @@ body {
 }
 
 /*TEXT STYLES*/
-p,body h1,body h2,body h3,body h4,body h5,body h6,table
+p,body h1,body h2,body h3,body h4,body h5,body h6
 {
 	font-family:'Open Sans',sans-serif;
 	font-weight: 600;

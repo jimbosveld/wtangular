@@ -1,0 +1,61 @@
+<div class="row">
+    <div class="col-lg-6">
+            <div class="input-group form-group">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button">Go!</button>
+              </span>
+              <input ng-model="asyncSelected" typeahead="corporatie.naam as corporatie.naam for corporatie in gegevensAllWocos | filter:$viewValue | limitTo:10" typeahead-editable="false"  typeahead-on-select="setId($item)" type="text" class="form-control" placeholder="zoek hier je corporatie">
+            </div><!-- /input-group -->
+    </div><!-- /.col-lg-6 -->
+</div>
+<div class="row" ng-hide="selectedCorporatieObject.naam">
+    <div class="col-sm-8">
+        <p>Voor deze corporatie hebben wij nog geen data</p>
+    </div>
+</div>
+<div class="row" ng-show="selectedCorporatieObject.naam">
+    <div class="col-sm-10">
+        <h3>Overzicht <span ng-bind="selectedCorporatieObject.naam"></span></h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Gemiddelde</th>
+                    <th>Woning</th>
+                    <th>Omgeving</th>
+                    <th>Corporatie</th>
+                    <th>Woonsituatie</th>
+                </tr>
+            </thead>
+            <tbody>
+                <td ng-bind="selectedCorporatieObject.average | number:1"></td>
+                <td ng-bind="selectedCorporatieObject.woning | number:1"></td>
+                <td ng-bind="selectedCorporatieObject.omgeving | number:1"></td>
+                <td ng-bind="selectedCorporatieObject.corporatie | number:1"></td>
+                <td ng-bind="selectedCorporatieObject.woonsituatie | number:1"></td>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="row" ng-show="selectedCorporatieObject.naam">
+    <div class="col-sm-10">
+        <h3>Individuele reviews voor <span ng-bind="selectedCorporatieObject.naam"></span></h3>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Review</th>
+                <th>Woning</th>
+                <th>Omgeving</th>
+                <th>Woonsituatie</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="reviews in specificCorporatieObject">
+                    <td>{{reviews.review}}</td>
+                    <td>{{reviews.woning}}</td>
+                    <td>{{reviews.omgeving}}</td>
+                    <td>{{reviews.woonsituatie}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
