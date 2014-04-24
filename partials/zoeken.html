@@ -1,16 +1,17 @@
 <div class="row">
-    <div class="col-lg-6">
-            <div class="input-group form-group">
-              <span class="input-group-btn">
-                <button class="btn btn-default" type="button">Go!</button>
-              </span>
-              <input ng-model="asyncSelected" typeahead="corporatie.naam as corporatie.naam for corporatie in gegevensAllWocos | filter:$viewValue | limitTo:10" typeahead-editable="false"  typeahead-on-select="setId($item)" type="text" class="form-control" placeholder="zoek hier je corporatie">
+    <div class="col-sm-6">
+            <div class=" form-group">
+              <input ng-model="asyncSelected" typeahead="corporatie.naam as corporatie.naam for corporatie in gegevensAllWocos | filter:$viewValue | limitTo:10" typeahead-editable="false"  typeahead-on-select="setId($item)" type="text" class="form-control input-lg" placeholder="zoek hier je corporatie">
             </div><!-- /input-group -->
     </div><!-- /.col-lg-6 -->
 </div>
-<div class="row" ng-hide="selectedCorporatieObject.naam">
-    <div class="col-sm-8">
-        <p>Voor deze corporatie hebben wij nog geen data</p>
+<div class="row" ng-hide="selectedCorporatieObject">
+    <div class="col-sm-6">
+        <div class="alert alert-success">
+            <p>
+                er is geen corporatie met beschikbare data geselecteerd
+            </p>
+        </div>
     </div>
 </div>
 <div class="row" ng-show="selectedCorporatieObject.naam">
